@@ -140,23 +140,26 @@ details[open] summary::before{
 content:'▼ ';
 }
 .weather-grid{
-display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(160px,1fr));
-gap:15px;
-margin-top:20px;
+display:flex;
+overflow-x:auto;
+gap:16px;
+padding:10px 0;
+scroll-snap-type:x mandatory;
+}
+
+.weather-grid::-webkit-scrollbar{
+display:none;
 }
 
 .weather-card{
-background:linear-gradient(
-135deg,
-#caf0f8,
-#90e0ef
-);
+min-width:140px;
+background:white;
+border-radius:22px;
 padding:20px;
-border-radius:18px;
 text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+scroll-snap-align:start;
+border:1px solid #e5f3ff;
 }
 
 .weather-card h3{
@@ -165,9 +168,10 @@ color:#023e8a;
 }
 
 .weather-temp{
-font-size:24px;
-font-weight:bold;
-margin:10px 0;
+font-size:32px;
+font-weight:700;
+color:#0284c7;
+margin:12px 0;
 }
 h2{
 color:#0369a1;
@@ -351,33 +355,94 @@ JX302 星宇
 <div class="weather-grid">
 
 <div class="weather-card">
-<h3>11/21 (六)</h3>
-<div class="weather-temp">22°~27°</div>
-<p>☀️ 晴時多雲</p>
+
+<div style="font-size:42px;">
+☀️
+</div>
+
+<h3>11/21（六）</h3>
+
+<div class="weather-temp">
+22°~27°
+</div>
+
+<p>
+晴時多雲
+</p>
+
 </div>
 
 <div class="weather-card">
-<h3>11/22 (日)</h3>
-<div class="weather-temp">21°~26°</div>
-<p>🌤️ 晴天</p>
+
+<div style="font-size:42px;">
+🌤️
+</div>
+
+<h3>11/22（日）</h3>
+
+<div class="weather-temp">
+21°~26°
+</div>
+
+<p>
+晴天
+</p>
+
 </div>
 
 <div class="weather-card">
-<h3>11/23 (一)</h3>
-<div class="weather-temp">21°~25°</div>
-<p>☁️ 多雲</p>
+
+<div style="font-size:42px;">
+☁️
+</div>
+
+<h3>11/23（一）</h3>
+
+<div class="weather-temp">
+21°~25°
+</div>
+
+<p>
+多雲
+</p>
+
 </div>
 
 <div class="weather-card">
-<h3>11/24 (二)</h3>
-<div class="weather-temp">20°~24°</div>
-<p>🌦️ 局部短暫雨</p>
+
+<div style="font-size:42px;">
+🌦️
 </div>
 
+<h3>11/24（二）</h3>
+
+<div class="weather-temp">
+20°~24°
+</div>
+
+<p>
+局部短暫雨
+</p>
+
+</div>
+
+
 <div class="weather-card">
-<h3>11/25 (三)</h3>
-<div class="weather-temp">21°~25°</div>
-<p>☀️ 晴天</p>
+
+<div style="font-size:42px;">
+☀️
+</div>
+
+<h3>11/25（三）</h3>
+
+<div class="weather-temp">
+21°~25°
+</div>
+
+<p>
+晴天
+</p>
+
 </div>
 
 </div>
