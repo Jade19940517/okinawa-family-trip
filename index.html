@@ -75,7 +75,70 @@ height:220px;
 object-fit:cover;
 border-radius:15px;
 }
+.timeline{
+position:relative;
+padding-left:35px;
+margin-top:20px;
+}
 
+.timeline::before{
+content:'';
+position:absolute;
+left:10px;
+top:0;
+bottom:0;
+width:4px;
+background:#0ea5e9;
+border-radius:20px;
+}
+
+.event{
+position:relative;
+background:white;
+padding:16px;
+margin-bottom:18px;
+border-radius:16px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.event::before{
+content:'';
+position:absolute;
+left:-30px;
+top:22px;
+width:14px;
+height:14px;
+border-radius:50%;
+background:#0ea5e9;
+border:4px solid white;
+}
+details{
+background:white;
+padding:20px;
+border-radius:20px;
+margin-bottom:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+summary{
+cursor:pointer;
+font-size:22px;
+font-weight:bold;
+list-style:none;
+}
+
+summary::-webkit-details-marker{
+display:none;
+}
+
+summary::before{
+content:'▶ ';
+color:#0ea5e9;
+}
+
+details[open] summary::before{
+content:'▼ ';
+}
 h2{
 color:#0369a1;
 }
@@ -326,6 +389,50 @@ JX302 星宇
 </div>
 
 </section>
+<section class="section">
+
+<details open>
+
+<summary>
+📅 Day 1｜11/21（六）抵達沖繩
+</summary>
+
+<div class="timeline">
+
+<div class="event">
+🛬 09:55 抵達那霸機場（第一批家人）
+</div>
+
+<div class="event">
+👨‍👩‍👧‍👦 13:15 機場集合
+</div>
+
+<div class="event">
+🍜 13:25－14:00 通堂拉麵
+</div>
+
+<div class="event">
+🐠 14:20－16:20 DMM Kariyushi Aquarium
+</div>
+
+<div class="event">
+🛬 16:40－17:00 接第二批家人
+</div>
+
+<div class="event">
+🍣 17:10－18:30 漁師食堂
+</div>
+
+<div class="event">
+🏨 HOTEL HAABESU OKINAWA
+</div>
+
+</div>
+
+</details>
+
+</section>
+
 <script>
 
 const tripDate =
